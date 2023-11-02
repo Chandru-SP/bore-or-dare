@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(assets/bg.jpg);
+    background-size: cover;
+    background-color: black;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    
+}
+
+/* Styles for the outer <div> */
+div {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; 
+    top: 30%;/* Vertically center the content */
+  
+    
+    
+
+  }
+  
+  /* Styles for the <h1> element */
+  h1#content,#dareContainer {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; 
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 37px;
+    letter-spacing: 5.4px;
+    word-spacing: -3.8px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: none;
+  }
+  .btn-dare {
+    min-width: 130px;
+    gap: 30px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    z-index: 0;
+    background: #fff;
+    overflow: hidden;
+    border: 2px solid #d90429;
+    color: #d90429;
+  }
+  .btn-dare:hover {
+    color: #fff;
+  }
+  .btn-dare:hover:after {
+    width: 100%;
+  }
+  .btn-dare:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #d90429;
+  }
+
+  .animate{
+    animation: myAnim 2s ease-in 0s 1 normal forwards;  
+  }
+
+  @keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+}
+  
+  /* Styles for the <button> element */
+  .btn {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    z-index: 0;
+    background: #fff;
+    overflow: hidden;
+    border: 2px solid #212529;
+    color: #212529;
+  }
+  .btn:hover {
+    color: #fff;
+  }
+  .btn:hover:after {
+    width: 100%;
+  }
+  .btn:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #212529;
+  }
+  
+
+
