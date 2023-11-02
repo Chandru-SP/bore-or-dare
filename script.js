@@ -113,6 +113,7 @@ var apiUrl='https://www.boredapi.com/api/activity';
 const Element=document.getElementById("content");
 const Button=document.getElementById("btn");
 const Button1=document.getElementById("btn-dare");
+const dareContainer = document.getElementById('dareContainer');
 
 Button.addEventListener('click',function(){
     Element.classList.toggle("animate")
@@ -120,25 +121,33 @@ Button.addEventListener('click',function(){
 })
 
 function getRandomDare() {
-    const dareContainer = document.getElementById('dareContainer');
     const randomIndex = Math.floor(Math.random() * dares.length);
     const randomDare = dares[randomIndex];
     dareContainer.textContent = randomDare;
 }
 
-Button1.addEventListener('click',getRandomDare)
-
-function loadApi(holder){
-fetch(apiUrl)
-.then(response=>{
-    var x=response.json();
-    console.log(x)
-    return x;
-})
-.then(data=>{
-    console.log(`You should do ${data.activity}`);
-    var content=data.activity
+Button1.addEventListener('click',function(){
+    console.log("calling")
+     Element.style.display='none';
+     dareContainer.style.display='flex';
+     getRandomDare();
+     
+    });
+    
+    function loadApi(holder){
+        fetch(apiUrl)
+        .then(response=>{
+            var x=response.json();
+            console.log(x)
+            return x;
+        })
+        .then(data=>{
+            console.log(`You should do ${data.activity}`);
+            var content=data.activity
+            dareContainer.style.display='none';
+            Element.style.display='flex';
     holder.textContent=`"${content}"`;
+
 
 })
 .catch(err=>{
